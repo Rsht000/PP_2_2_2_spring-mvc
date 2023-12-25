@@ -1,6 +1,7 @@
-package Service;
+package hib.Service;
 
-import Model.Car;
+
+import hib.model.Car;
 
 import java.util.List;
 

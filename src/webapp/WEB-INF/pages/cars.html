@@ -12,29 +12,28 @@
     </style>
 </head>
 <body>
-<h1>Garage</h1>
+
+<h1>Table</h1>
 <table border="5">
     <tr>
-        <th>Model</th>
-        <th>Series</th>
-        <th>Price</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>Update youSER</th>
+        <th>Delete youSER</th>
     </tr>
-    <tr th:each="msg : ${car}">
-        <td th:utext="${msg.getModel()}"></td>
-        <td th:utext="${msg.getSeries()}"></td>
-        <td th:utext="${msg.getPrice()}"></td>
+    <tr th:each="user : ${user}">
+        <td th:href="@{show}" th:text="${user.getId()}"></td>
+        <td th:utext="${user.getName()}"></td>
+        <td th:utext="${user.getLastName()}"></td>
+        <td th:utext="${user.getAge()}"></td>
+        <td><a th:href="@{index(id=${user.id})}">Update</a> </td>
+        <td><a th:href="@{delete(id=${user.id})}">Delete</a> </td>
     </tr>
+    <tbody>
 </table>
+</div>
+<p><a href="/newUser"> Create User</a></p>
 </body>
 </html>
-<!--    <title></title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<div>-->
-<!--    <th:block th:each="msg : ${car}">-->
-<!--        <h1 th:text="${msg}"></h1>-->
-<!--    </th:block>-->
-<!--</div>-->
-<!--<a href="/">back</a>-->
-<!--</body>-->
-<!--</html>-->
