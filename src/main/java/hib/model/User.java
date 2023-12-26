@@ -1,7 +1,5 @@
 package hib.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.*;
 
 @Entity
@@ -18,7 +16,9 @@ public class User {
     private String LastName;
     @Column(name = "age")
     private int age;
-    public User() {}
+
+    public User() {
+    }
 
     public User(String name, String lastName, int age) {
         this.name = name;

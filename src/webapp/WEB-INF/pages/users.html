@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <title>Loop</title>
     <style>
-        table th, table td {padding: 15px;}
-        .row  {
+        table th, table td {
+            padding: 15px;
+        }
+
+        .row {
             font-style: initial;
         }
     </style>
@@ -28,8 +31,8 @@
         <td th:utext="${user.getName()}"></td>
         <td th:utext="${user.getLastName()}"></td>
         <td th:utext="${user.getAge()}"></td>
-        <td><a th:href="@{index(id=${user.id})}">Update</a> </td>
-        <td><a th:href="@{delete(id=${user.id})}">Delete</a> </td>
+        <td><a th:href="@{Update-User(id=${user.id})}">Update</a></td>
+        <td><a th:href="@{delete(id=${user.id})}">Delete</a></td>
     </tr>
     <tbody>
 </table>

@@ -1,7 +1,6 @@
 package hib.Service;
 
 import hib.dao.UserDao;
-import hib.dao.UserDaoImp;
 import hib.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +36,7 @@ public class UserServiceImp implements UserService {
     public User getUserById(int id) {
         return userDao.getUserById(id);
     }
+
     @Transactional
     @Override
     public void userDeleteById(int id) {
